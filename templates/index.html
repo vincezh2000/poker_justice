@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Texas Hold'em Prediction</title>
+</head>
+<body>
+  <h1>Texas Hold'em Prediction Demo</h1>
+
+  <p>本例中，假设已有三个固定目录:</p>
+  <ul>
+    <li><code>src/common</code> (5张公共牌)</li>
+    <li><code>src/hand_l</code> (2张左手牌)</li>
+    <li><code>src/hand_r</code> (2张右手牌)</li>
+  </ul>
+  <p>点击按钮后，将一次性预测并比较哪边获胜。</p>
+
+  <button onclick="predictAll()">批量预测 &amp; 比较</button>
+
+  <div id="resultArea" style="margin-top:20px;"></div>
+
+  <script>
+    async function predictAll() {
+      const div = document.getElementById('resultArea');
+      div.innerHTML = "正在请求 /predict_all ...";
+
+      try {
+        const resp = await fetch('/predict_all');
+        const data = await resp.json();
+        if (data.status === 'ok') {
+          // 展示公共牌, 左手, 右手, 以及胜利方
+          let html = "<h3>结果:</h3>";
+          html += "<p>公共牌: " + data.common.join(", ") + "</p>";
+          html += "<p>左手牌: " + data.left.join(", ") + "</p>";
+          html += "<p>右手牌: " + data.right.join(", ") + "</p>";
+          html += "<p>胜方: " + data.winner + "</p>";
+
+          // 展示更详细的信息: 最佳五张, 牌型rank
+          html += "<p>左手最佳5张: " + data.left_best5.join(", ") + "</p>";
+          html += "<p>右手最佳5张: " + data.right_best5.join(", ") + "</p>";
+          html += "<p>左手rank: " + data.left_rank_info + "</p>";
+          html += "<p>右手rank: " + data.right_rank_info + "</p>";
+
+          div.innerHTML = html;
+        } else {
+          div.innerHTML = "<p style='color:red;'>Error: " + data.msg + "</p>";
+        }
+      } catch (err) {
+        div.innerHTML = "<p style='color:red;'>请求失败: " + err + "</p>";
+      }
+    }
+  </script>
+</body>
+</html>
