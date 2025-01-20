@@ -1,4 +1,4 @@
-```markdown
+
 # Texas Hold'em Screenshot + Prediction Project
 
 This project demonstrates an end-to-end workflow for automatically **screenshotting** parts of the screen, **recognizing** playing cards (suits and ranks), and **comparing** two poker hands (left vs. right) given a set of public cards. It consists of:
@@ -30,7 +30,7 @@ This project demonstrates an end-to-end workflow for automatically **screenshott
 
 A simplified layout example:
 
-```
+
 my_card_app/
 ├── app.py                # Python Flask server
 ├── cardnet_resnet18.pth  # (Optional) PyTorch model weights
@@ -41,7 +41,7 @@ my_card_app/
 │         ├── ContentView.swift
 │         └── ...
 └── README.md             # You're reading this file
-```
+
 
 Within the SwiftUI app (`ContentView.swift`), you will find:
 - **Coordinates** & bounding boxes for 9 positions:
@@ -106,5 +106,4 @@ The Python server (`app.py`) has routes:
 ## 6. License
 
 Feel free to adapt and customize this code for your own projects.  
-```
 
