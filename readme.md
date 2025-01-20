@@ -1,5 +1,5 @@
 
-# Texas Hold'em Screenshot + Prediction Project
+# Texas Hold'em Screenshot + Prediction Project for WSOP online Hold'em game
 
 This project demonstrates an end-to-end workflow for automatically **screenshotting** parts of the screen, **recognizing** playing cards (suits and ranks), and **comparing** two poker hands (left vs. right) given a set of public cards. It consists of:
 
@@ -18,6 +18,8 @@ This project demonstrates an end-to-end workflow for automatically **screenshott
 ## 1. Prerequisites
 
 1. **macOS** environment with Swift (or Xcode) to build and run the SwiftUI app.
+I also provide a compiled version of the app, download via this link:
+https://drive.google.com/file/d/1fU5TC__nVRITE330NMoU1wMOTpNxgfV_/view?usp=sharing
 2. **Python 3** with:
    - `Flask` (for the web server),
    - `torch`, `torchvision` (for the PyTorch model),
