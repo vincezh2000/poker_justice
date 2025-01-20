@@ -1,5 +1,4 @@
-
-# Texas Hold'em Screenshot + Prediction Project for WSOP online Hold'em game
+# Texas Hold'em Screenshot + Prediction Project for [WSOP online Hold'em game](https://www.playwsop.com/?utm_source=wsopcom&utm_medium=banner&utm_campaign=wsop.com_930x200_bigbanner&pid=wsop.com&c=animatedbanner_930x200)
 
 This project demonstrates an end-to-end workflow for automatically **screenshotting** parts of the screen, **recognizing** playing cards (suits and ranks), and **comparing** two poker hands (left vs. right) given a set of public cards. It consists of:
 
@@ -18,8 +17,8 @@ This project demonstrates an end-to-end workflow for automatically **screenshott
 ## 1. Prerequisites
 
 1. **macOS** environment with Swift (or Xcode) to build and run the SwiftUI app.
-I also provide a compiled version of the app, download via this link:
-https://drive.google.com/file/d/1fU5TC__nVRITE330NMoU1wMOTpNxgfV_/view?usp=sharing
+   I also provide a compiled version of the app, download via this link:
+   [下载链接](https://drive.google.com/file/d/1fU5TC__nVRITE330NMoU1wMOTpNxgfV_/view?usp=sharing)
 2. **Python 3** with:
    - `Flask` (for the web server),
    - `torch`, `torchvision` (for the PyTorch model),
@@ -33,6 +32,7 @@ https://drive.google.com/file/d/1fU5TC__nVRITE330NMoU1wMOTpNxgfV_/view?usp=shari
 A simplified layout example:
 
 
+   ```bash
 my_card_app/
 ├── app.py                # Python Flask server
 ├── cardnet_resnet18.pth  # (Optional) PyTorch model weights
@@ -43,7 +43,7 @@ my_card_app/
 │         ├── ContentView.swift
 │         └── ...
 └── README.md             # You're reading this file
-
+      ```
 
 Within the SwiftUI app (`ContentView.swift`), you will find:
 - **Coordinates** & bounding boxes for 9 positions:
