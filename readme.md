@@ -1,4 +1,4 @@
-# Texas Hold'em Screenshot + Prediction Project for [WSOP online Hold'em game](https://www.playwsop.com/?utm_source=wsopcom&utm_medium=banner&utm_campaign=wsop.com_930x200_bigbanner&pid=wsop.com&c=animatedbanner_930x200)
+# [Texas Hold'em AI Prediction for WSOP online Hold'em Daily Blize](https://www.playwsop.com/?utm_source=wsopcom&utm_medium=banner&utm_campaign=wsop.com_930x200_bigbanner&pid=wsop.com&c=animatedbanner_930x200)
 
 This project demonstrates an end-to-end workflow for automatically **screenshotting** parts of the screen, **recognizing** playing cards (suits and ranks), and **comparing** two poker hands (left vs. right) given a set of public cards. It consists of:
 
@@ -6,6 +6,9 @@ This project demonstrates an end-to-end workflow for automatically **screenshott
   - Automated or one-time screenshots of defined screen regions.
   - Calling a local **Python/Flask** backend for card recognition and poker-hand evaluation.
   - Displaying recognized card images & corresponding predictions (plus an optional minimal mode).
+      - **Example interface**: 
+      - Complete mode: ![Complete Mode Screenshot](src/screen/app1.png)  
+      - Minimal mode: ![Minimal Mode Screenshot](src/screen/app2.png)
 
 - A **Python/Flask** server that:
   - Loads a CNN model (or other card recognition logic).
@@ -13,6 +16,20 @@ This project demonstrates an end-to-end workflow for automatically **screenshott
   - Returns JSON with recognized card strings, best five-card combos, and the winning side.
 
 ---
+
+### How the App Works
+- Functionality Examples:
+  - Screenshot and prediction:  
+    ![Functionality Example 1](src/screen/function1.png)
+  - Poker hand comparison:  
+    ![Functionality Example 2](src/screen/function2.png)
+
+### What the Game Looks Like
+- WSOP Online Hold'em Game Example:  
+  - Screenshot 1:  
+    ![Game Example 1](src/screen/game1.png)
+  - Screenshot 2:  
+    ![Game Example 2](src/screen/game2.png)
 
 ## 1. Prerequisites
 
